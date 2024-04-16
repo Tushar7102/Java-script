@@ -1,5 +1,6 @@
 const signupform = document.getElementById("signup");
 const signinform = document.getElementById("signin");
+const arr=JSON.parse(localStorage.getItem('Profile'))||[]
 signupform.addEventListener("submit", (e) => {
   e.preventDefault();
   let signupobj = {
@@ -9,8 +10,9 @@ signupform.addEventListener("submit", (e) => {
     phone: document.querySelector("#phone").value,
     password: document.querySelector("#password").value,
   };
+  arr.push(signupobj);
   // console.log(signupobj);
-  localStorage.setItem("Profile", JSON.stringify(signupobj));
+  localStorage.setItem("Profile", JSON.stringify(arr));
 });
 
 signinform.addEventListener("submit", (e) => {
