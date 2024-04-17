@@ -1,6 +1,6 @@
 const signupform = document.getElementById("signup");
 const signinform = document.getElementById("signin");
-// let arr=JSON.parse(localStorage.getItem('Profile'))||[]
+let arr=JSON.parse(localStorage.getItem('Profile'))||[]
 signupform.addEventListener("submit", (e) => {
   e.preventDefault();
   let signupobj = {
@@ -10,9 +10,9 @@ signupform.addEventListener("submit", (e) => {
     phone: document.querySelector("#phone").value,
     password: document.querySelector("#password").value,
   };
-  // arr.push(signupobj);
+  arr.push(signupobj);
   // console.log(signupobj);
-  localStorage.setItem("Profile", JSON.stringify(signupobj));
+  localStorage.setItem("Profile", JSON.stringify(arr));
 });
 
 signinform.addEventListener("submit", (e) => {
@@ -24,13 +24,13 @@ signinform.addEventListener("submit", (e) => {
   };
   //    console.log(signinobj);
   let loginformdata = JSON.parse(localStorage.getItem("Profile"));
-  // console.log(loginformdata)
-  if (loginformdata.email == signinobj.email && loginformdata.password == signinobj.password) 
-  {
-    alert("Login Succesfully");
-  } 
-  else 
-  {
-    alert("invaild username or password");
-  }
+  //  console.log(loginformdata)
+  
+   let store=loginformdata.filter((el,i)=>el.email==signinobj.email && el.password==signinobj.password)
+  
+   if(store[0]){
+    alert("succesfullty")
+   }else{
+    alert("Invalid password || email")
+   }
 });
