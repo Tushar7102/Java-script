@@ -1,6 +1,6 @@
 const signupform = document.getElementById("signup");
 const signinform = document.getElementById("signin");
-let arr=JSON.parse(localStorage.getItem('Profile'))||[]
+let arr = JSON.parse(localStorage.getItem('Profile')) || []
 signupform.addEventListener("submit", (e) => {
   e.preventDefault();
   let signupobj = {
@@ -25,12 +25,13 @@ signinform.addEventListener("submit", (e) => {
   //    console.log(signinobj);
   let loginformdata = JSON.parse(localStorage.getItem("Profile"));
   //  console.log(loginformdata)
-  
-   let store=loginformdata.filter((el,i)=>el.email==signinobj.email && el.password==signinobj.password)
-  
-   if(store[0]){
-    alert("succesfullty")
-   }else{
+
+  let store = loginformdata.filter((el, i) => el.email == signinobj.email && el.password == signinobj.password)
+
+  if (store[0]) {
+    alert(`succesfullty Login Welcome Mr.${signinobj.name}`)
+    window.location = "project.html"
+  } else {
     alert("Invalid password || email")
-   }
+  }
 });
