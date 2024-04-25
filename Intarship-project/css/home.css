@@ -152,27 +152,44 @@ background-color: white;
 .body-wrap
 {
    position: relative;
-   top: 86px;
+   top: 68px;
    z-index: -1;
 }
 .man
 {
     position: relative;
     top: 0%;
-    left: 0%;
+    left: 0.05%;
+    background:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)),url(../img/mancloaths.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 135vh;
 }
-.man span
+.woman
+{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    background:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4)),url(../img/womancloathe.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 135vh;
+}
+.man:hover span,.woman:hover span
+{
+    font-family: cursive;
+}
+.man span ,.woman span
 {
     position: absolute;
     top: 95%;
     left: 3%;
     font-weight: bold;
     font-size: 18px;
-}
-.man img
-{
-    width: 100%;
-    height: 100%;
+    cursor: pointer;
+    color: white;
 }
 .bi-arrow-up-right
 {
@@ -183,7 +200,7 @@ background-color: white;
     font-size: 25px;
     font-weight: 900;
 } 
-.man:hover .bi-arrow-up-right
+.man:hover .bi-arrow-up-right, .woman:hover .bi-arrow-up-right
 {
    transform: rotate(45deg);
 }
@@ -223,6 +240,14 @@ background-color: white;
    position: relative;
    top: -20px;
    z-index: -1;
+}
+.man
+{
+    height: 100vh;
+}
+.woman
+{
+    height: 100vh;
 }
 }
 
@@ -270,6 +295,14 @@ background-color: white;
    top: -18px;
    z-index: -1;
 }
+.man
+{
+    height: 100vh;
+}
+.woman
+{
+    height: 100vh;
+}
 }
 
 
@@ -312,7 +345,7 @@ background-color: white;
 .body-wrap
 {
    position: relative;
-   top: 86px;
+   top: 68px;
    z-index: -1;
 }
 }
