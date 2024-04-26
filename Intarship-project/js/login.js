@@ -117,6 +117,7 @@ login.addEventListener("submit", (e) => {
             } 
             arr.push(obj)
             localStorage.setItem('userinfo',JSON.stringify(arr))
+            window.location = "home.html";
     }
     else
     {
