@@ -604,6 +604,72 @@ body {
   {
     color: #000;
   }
+  .footer
+  {
+    padding: 50px 20px;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+  }
+  .footer-h1
+  {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .footer-anchour
+  {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    margin: 4px 0px;
+  }
+  .footer-anchour:hover
+  {
+    color: white;
+    font-style: italic;
+  }
+  .footer-input
+  {
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #212529!important;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    padding: 0px 10px;
+  }
+  .footer-arrow
+  {
+    font-size: 25px;
+  }
+  .social-media
+  {
+    text-align: right;
+  }
+  .footer-projectsname
+  {
+    font-size: 13px;
+    display: block;
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+  }
+  .footer-projectsname:hover
+  {
+    color: rgb(112, 112, 112);
+    font-style: italic;
+  }
+  .name-footer
+  {
+    position: absolute;
+    top: 25%;
+    width: 75%;
+  }
 
 
 
