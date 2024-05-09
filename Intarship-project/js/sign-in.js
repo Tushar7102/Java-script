@@ -1,27 +1,3 @@
-$(document).ready(function(){
-   $("#signform").hide() 
-})
-
-$(document).ready(function(e){
-    
-    $(".bi-emoji-smile-fill").click(function(){
-        $("#signform").slideToggle()  
-    }) 
- })
-
- $(document).ready(function(){
-    $("#signform-media").hide() 
- })
- 
- $(document).ready(function(e){
-     
-     $(".bi-emoji-smile-fill").click(function(){
-         $("#signform-media").slideToggle()  
-     }) 
-  })
-
-
-
  const sing_to_login = document.getElementById("signtologin");
 sing_to_login.addEventListener('click', () => {
     window.location = "login-page.html";
