@@ -100,6 +100,17 @@
 {
     font-style: italic;
 }
+.nav-new-media
+{
+    position: absolute;
+    top: 91.9%;
+    left: 1.5%;
+    color: white;
+    background-color: white;
+    width: 97%;
+    height: auto;
+    color: black;
+}
 .new-sesons
 {
     font-size: 35px;

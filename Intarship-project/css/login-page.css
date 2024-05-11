@@ -11,7 +11,7 @@
 .laptop-size-link
 {
     color: black;
-    font-weight: 500;
+    font-weight: 400;
     
 }
 .navbar
@@ -22,27 +22,73 @@
 {
     width: 65px; 
     color: black;
-    font-weight: 500;
+    font-weight: 400;
 }
 .long-live
 {
     width: 110px; 
     color: black;
-    font-weight: 500;
+    font-weight: 400;
 }
 .short-livest
 {
     width: 85px; 
     color: black;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
 }
 .long-livest
 {
     width: 130px; 
     color: black;
-    font-weight: 500;
+    font-weight:400;
     text-align: center;
+}
+.laptop-size-link:hover,.short-livest:hover,.long-livest:hover
+{
+    color: black;
+    font-style: italic;
+}
+.nav-new
+{
+    position: absolute;
+    top: 100%;
+    left: 1.5%;
+    color: white;
+    background-color: white;
+    width: 97%;
+    color: black;
+}
+.nav-new2
+{
+    position: absolute;
+    top: 100%;
+    left: 1.5%;
+    color: white;
+    background-color: white;
+    width: 97%;
+    color: black;
+    height: 100vh;
+    overflow: scroll;
+}
+.nav-new-kid,.sale-kid
+{
+    cursor: pointer;
+}
+.nav-new-kid:hover,.sale-kid:hover
+{
+    font-style: italic;
+}
+.nav-new-media
+{
+    position: absolute;
+    top: 91.9%;
+    left: 1.5%;
+    color: white;
+    background-color: white;
+    width: 97%;
+    height: auto;
+    color: black;
 }
 .nav-link
 {
@@ -248,14 +294,14 @@
     {
         width: 110px; 
         color: black;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
     }
     .short-live
     {
         width: 65px; 
         color: 500;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
     }
     .form-valid
@@ -269,7 +315,7 @@
     {
         text-align: center;
         font-size: 30px;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: 0%;
     }
     .informatin-ditails
