@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- single card -->
+    <div id="container" style="display: grid; grid-template-columns:repeat(3,1fr); gap: 15px;"></div>
+
+
+    <script>
+
+        function cardlist(data){
+            // console.log(data)
+            let store =data.map((el)=>singleCard    (el.image,el.title,el.category,el.price,el.description))
+            // console.log(store)
+            document.getElementById("container").innerHTML=store.join("")
+
+        }
+
+        function fetchdata() {
+            fetch("https://fakestoreapi.com/products") //promise
+                // console.log(store)
+                .then((res) => res.json())
+                .then((data) => cardlist(data))
+                .catch((err) => console.log(err))
+        }
+        fetchdata()
+
+        function singleCard(image,price,description,title,category) {
+            let card = `
+      <div style="border: 1px solid black; padding: 20px;">
+      <img src=${image} alt=${title} height="200" width="200">
+      <h2>${title}</h2>
+      <h2>Price-${price}</h2>
+      <h5>${category}</h5>
+      <p>${description}</p>
+      </div>
+      `
+
+      return card;
+        }
+    </script>
+</body>
+
+</html>

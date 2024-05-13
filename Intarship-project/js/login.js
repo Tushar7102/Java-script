@@ -9,27 +9,6 @@ logins.addEventListener('click', () => {
 })
 
 
-$(document).ready(function(){
-   $("#signform").hide() 
-})
-
-$(document).ready(function(e){
-    
-    $(".bi-emoji-smile-fill").click(function(){
-        $("#signform").slideToggle()  
-    }) 
- })
-
- $(document).ready(function(){
-    $("#signform-media").hide() 
- })
- 
- $(document).ready(function(e){
-     
-     $(".bi-emoji-smile-fill").click(function(){
-         $("#signform-media").slideToggle()  
-     }) 
-  })
 
 
 

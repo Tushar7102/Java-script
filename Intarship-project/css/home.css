@@ -656,6 +656,10 @@ body {
     top: 100%;
     left: 38%;
   }
+  .slide-track:hover
+  {
+    animation-play-state: paused;
+  }
   .slider-man10
   {
     height: 78.9%;
@@ -839,6 +843,12 @@ body {
 {
 border: none;
 }
+.name-footer
+{
+  position: absolute;
+  top: 73%;
+  width: 85%;
+}
 }
 
 @media(min-width:576px) and (max-width:768px)
@@ -900,6 +910,12 @@ border: none;
 .slider-man10
 {
   height: 78%;
+}
+.name-footer
+{
+  position: absolute;
+  top: 45%;
+  width: 85%;
 }
 }
 
@@ -989,6 +1005,12 @@ border: none;
 .slider-man10
 {
   height: 78%;
+}
+.name-footer
+{
+  position: absolute;
+  top: 60%;
+  width: 85%;
 }
 }
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            text-align: center;  
+            margin: 20px 15px;
+            padding:30px;
+        }
+        #cont{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    </style>
+</head>
+<body>
+    <div id="cont"></div>
+
+    <script>
+        function fetchapi(){
+            fetch("https://reqres.in/api/users?page=2")
+            .then((res)=>res.json())
+            .then((data)=>CardList(data.data))
+            .catch((err)=>console.log(err))
+        }
+        fetchapi()
+
+        function CardList(data){
+            let store=data.map((el)=>SignleCard(el.email,el.first_name,el.last_name,el.avatar))
+            console.log(store)
+            document.querySelector("#cont").innerHTML=store.join("");
+        }
+
+        function SignleCard(email,first_name,last_name,avatar){
+            let card=`
+            <div class="box">
+                <h3>Email : ${email}</h3>
+                <h3>First Name : ${first_name}</h3>
+                <h3>Last Name : ${last_name}</h3>
+                <img src="${avatar}" alt="" height="300px" width="300px">
+            </div>
+            `;
+
+            return card;
+        }
+    </script>
+</body>
+</html>

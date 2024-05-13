@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-image: url('https://cdn.dribbble.com/users/2844289/screenshots/10769507/dribbble.gif');
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+    #container
+        {
+           display: grid;
+           grid-template-columns: repeat(3,1fr);
+           grid-gap: 5px;
+           padding-top: 2%;
+        }
+        .box{
+            border: 1px solid black;
+            padding: 3% 25px;
+            background-color: rgba(0, 0, 0, 0.5);
+
+        }
+        .box:hover
+        {
+            /* transform: scale(1.1); */
+          transition: 0.5s ease-in-out;
+        }
+        .text
+        {
+         text-align: center;
+         color: rgb(255, 255, 255);
+         background-color: black;
+        }
+        .box h2
+        {
+          color: white;
+            
+        }
+        .box h3
+        {
+            color: white;
+            font-weight: 200;
+            font-size: 20px;
+            
+        }
+
+        </style>
+</head>
+<body>
+    <h1 class="text">Corona Api</h1>
+    <div id="container"></div>
+    <div class="div">
+    
+  
+</body>
+</html>
+<script>
+    function Fetchdata(){
+    fetch("https://api.rootnet.in/covid19-in/stats/latest")
+    .then((res)=>res.json())
+    .then((data)=>CardList(data.data.regional))
+    .catch((err)=>console.log(err))
+    }
+    Fetchdata()
+
+    function CardList(data)
+    {
+       let store=data.map((el)=>SingleCarad( el.loc,el.confirmedCasesIndian,el.confirmedCasesForeign,el.discharged, el.deaths,el.totalConfirmed))
+        document.getElementById("container").innerHTML=store.join('');
+    }
+
+    function SingleCarad(loc, confirmedCasesIndian ,confirmedCasesForeign, discharged, deaths ,totalConfirmed){
+     
+    let Card=`
+    <div class="box">
+       <h2>location :${loc}</h2>
+       <h3>confirmedCasesIndian: ${confirmedCasesIndian}</h3>
+       <h3>confirmedCasesForeign: ${confirmedCasesForeign}</h3>
+       <h3>Discharged": ${discharged}</h3>
+       <h3>Deaths: ${deaths}</h3>
+       <h3>totalConfirmed: ${totalConfirmed}</h3>
+    </div>  
+    `
+      return Card
+    }
+    
+    </script>

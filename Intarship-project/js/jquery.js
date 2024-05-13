@@ -2,13 +2,13 @@
 
 
 $(document).ready(function(){
-    $("#signform").hide() 
+    $(".sign-in").hide() 
  })
  
- $(document).ready(function(e){
+ $(document).ready(function(e){  
      
      $(".bi-emoji-smile-fill").click(function(){
-         $("#signform").slideToggle()  
+         $(".sign-in").slideToggle()  
      }) 
   })
  

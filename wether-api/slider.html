@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        .slider-container {
+            max-width: 650px;
+            margin: 25px auto;
+        }
+
+        #slider {
+            width: 100%;
+            height: 90vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <img src="https://science.nasa.gov/wp-content/uploads/2023/09/true_color_image_of_Earth.jpeg" id="slider"
+            alt="Slider">
+    </div>
+
+    <script>
+        const images = [
+            "https://science.nasa.gov/wp-content/uploads/2023/09/stsci-01ga76rm0c11w977jrhgj5j26x-2.png?w=4096&format=png",
+            "https://scitechdaily.com/images/Vast-Universe-Art-Concept.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDLPl24i5kjdTpYv6U79gsJwwDPvC351iqky7T_c4sSkNd_chUJynsfTnxgRSBzuejDw4&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qJvNf67J9TxRK5WUox8q-ArkrAZRxuKBKP-Q5WyCj1gFypG8_ooAj-QDUm8zuyL-r38&usqp=CAU",
+            "https://i.ytimg.com/vi/luE0mPVhK9k/maxresdefault.jpg"
+        ];
+
+        let index = 0;
+        const slider = document.getElementById("slider");
+
+        setInterval(function () {
+            slider.src = images[index];
+            index++;
+            if (index === images.length) {
+                index = 0;
+            }
+        }, 2000);
+
+    </script>
+</body>
+
+</html>

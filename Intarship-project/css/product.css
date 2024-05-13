@@ -530,3 +530,20 @@
        display: none;
     }
 }
+.products-filter {
+    margin-bottom: 20px;
+  }
+  
+  .products-filter select {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .products-filter select:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px #337ab7;
+  }
