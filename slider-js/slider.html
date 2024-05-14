@@ -31,24 +31,27 @@
     </div>
 
     <script>
-        const images = [
+        var images = [
             "https://science.nasa.gov/wp-content/uploads/2023/09/stsci-01ga76rm0c11w977jrhgj5j26x-2.png?w=4096&format=png",
             "https://scitechdaily.com/images/Vast-Universe-Art-Concept.jpg",
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDLPl24i5kjdTpYv6U79gsJwwDPvC351iqky7T_c4sSkNd_chUJynsfTnxgRSBzuejDw4&usqp=CAU",
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qJvNf67J9TxRK5WUox8q-ArkrAZRxuKBKP-Q5WyCj1gFypG8_ooAj-QDUm8zuyL-r38&usqp=CAU",
             "https://i.ytimg.com/vi/luE0mPVhK9k/maxresdefault.jpg"
         ];
+        let slider=document.getElementById("slider")
+        let index=0;
+        setInterval(function(){
+slider.src=images[index]
+index++
+if(index== images.length)
+{
+    index=0
+}
+        },2000)
+  
 
-        let index = 0;
-        const slider = document.getElementById("slider");
+       
 
-        setInterval(function () {
-            slider.src = images[index];
-            index++;
-            if (index === images.length) {
-                index = 0;
-            }
-        }, 2000);
 
     </script>
 </body>

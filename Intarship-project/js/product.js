@@ -19,7 +19,9 @@ fetdata()
 
 function singleCard(images,price,title,id) {
     let card = `
-    <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-0 p-0 mt-4 marl position-relative top-0  left-0" id="${id}">
+    
+     <div class="card-list">
+              <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-0 p-0 mt-4 marl position-relative top-0  left-0" id="${id}">
     <div class="products-images-main">
       <img src="${images[0]}">
       <div class="products-images">
@@ -36,6 +38,7 @@ function singleCard(images,price,title,id) {
       <p class="product-name">${title}</p>
       <p class="">$${price}</p></div>
      </div>
+              </div>
 `
   return card
 }
