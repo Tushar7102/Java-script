@@ -208,6 +208,12 @@
     left: 0%;
    display: none;
 }
+.card-list
+{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
 .marl
 {
     cursor: pointer;
@@ -238,6 +244,7 @@
 }
 
 
+
 @media(min-width:0px) and (max-width:575px)
 {
     .media-nav ul{
@@ -264,6 +271,12 @@
         font-weight: 400;
         text-align: center;
     }
+    .card-list
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
     .product-arrivals
 {
     font-size: 35px;
@@ -350,6 +363,13 @@
    top: 95%;
    display: block;
 }
+
+.card-list
+{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
 .product-wish{
     font-size: 13px;
     width: 50%;
@@ -402,6 +422,12 @@
        top: 95%;
        display: block;
     }
+    .card-list
+{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+}
     .product-wish{
         font-size: 13px;
         width: 50%;
@@ -464,6 +490,12 @@
         width: 50%;
         margin: auto;
     }
+    .card-list
+{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+}
     .products-images img {
         width: 98%;
         height: 100%;
