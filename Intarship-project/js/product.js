@@ -1,8 +1,11 @@
+let productdata=[]
+let productdata2=[]
 function cardlist(data)
 {
     // console.log(data)
     let store=data.map((el)=>singleCard(el.images,el.price,el.title,el.id))
-     console.log(store)
+    // store === cardlist(filterdata)
+    //  console.log(store)
     document.getElementById("product-sliders").innerHTML=store.join("")
 }
 
@@ -10,18 +13,23 @@ function cardlist(data)
 function fetdata(){
     fetch("http://localhost:3000/products")
     .then(response => response.json())
-    .then((data) => cardlist(data))
+    .then((data)=>{
+      productdata=data
+      productdata2=data
+      cardlist(data)
+    })
     .catch((err)=> console.log(err))
 }
-fetdata()
 
+fetdata()
 
 
 function singleCard(images,price,title,id) {
     let card = `
     
      <div class="card-list">
-              <div class=" mb-0 p-0 mt-4 marl position-relative top-0  left-0" id="${id}">
+
+    <div class=" mb-0 p-0 mt-4 marl position-relative top-0  left-0" id="${id}">
     <div class="products-images-main">
       <img src="${images[0]}">
       <div class="products-images">
@@ -42,3 +50,23 @@ function singleCard(images,price,title,id) {
 `
   return card
 }
+
+let dataformhomesuits=new URLSearchParams(window.location.search)
+
+window.addEventListener("load",()=>{
+  setTimeout(()=>{
+    let filterdata=productdata.filter((el)=>el.category === dataformhomesuits.get("category"))
+    console.log(filterdata)
+    if(dataformhomesuits.get("category")=="Suits")
+      {
+        cardlist(filterdata)
+      }
+
+   else if(dataformhomesuits.get("category")==="PoloShirts"){
+    cardlist(filterdata)
+   }
+      else{
+        fetdata()
+      }
+  },50)
+})
