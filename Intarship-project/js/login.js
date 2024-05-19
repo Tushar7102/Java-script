@@ -153,7 +153,7 @@ sign.addEventListener("submit", (e) => {
             let loginformdata = JSON.parse(localStorage.getItem("userinfo"));
 
             let store = loginformdata.filter((el, i) => el.email == signinobj.email && el.password == signinobj.password)
-            if (store[0]) {
+        if (a[0]) {
                 alert(`succesfullty Login Welcome`)
                 window.location = "home.html"
               } else {

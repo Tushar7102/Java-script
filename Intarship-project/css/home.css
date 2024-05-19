@@ -28,10 +28,15 @@
     padding: 0%;
     box-sizing: border-box;
 }
+.main-head
+{
+    z-index: 99;
+}
 .nav-border
 {
     border-bottom: 2px solid black;
     background-color: rgb(255, 255, 255);
+    z-index: 1;
 }
 .laptop-size-link
 {
@@ -608,7 +613,6 @@ body {
     /* background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
     content: "";
     position: absolute;
-    z-index: 2;
   }
   .slider2::after {
     right: 0;
@@ -625,6 +629,7 @@ body {
     animation: scroll 20s linear infinite;
     display: flex;
     width: calc(250px * 14);
+    z-index: -1;
   }
   .slider2 .slide {
     width: 400px;
@@ -634,6 +639,7 @@ body {
   {
     text-align: center;
     cursor: pointer;
+
   }
   .slide-track .slide span
   {

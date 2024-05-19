@@ -65,6 +65,10 @@ window.addEventListener("load",()=>{
    else if(dataformhomesuits.get("category")==="PoloShirts"){
     cardlist(filterdata)
    }
+   else if(dataformhomesuits.get("category")==="Shirt")
+    {
+      cardlist(filterdata)
+    }
       else{
         fetdata()
       }
