@@ -156,10 +156,12 @@
     margin-left: 15px;
     margin-bottom: 0%;
 }
-.product-name
+.product-name,.product-price
 {
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 0%;
+    color: black;
+    font-size: 17px;
 }
 .products-images
 {

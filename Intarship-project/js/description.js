@@ -122,6 +122,7 @@ sign_media.addEventListener("submit", (e) => {
 })
 
 
+
 let swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     effect: "cards",
